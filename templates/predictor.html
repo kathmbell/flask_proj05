@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- this is where the javascript and css code goes -->
+		
+	</head>
+	<body>
+		<form method="POST"> <!-- specify method = "POST" so that flask can retrieve data -->
+							 <!-- method = "GET" also works for flask to retrieve data
+							 	with some modifications, but values will be shown in the url upon form submission -->
+
+			<!-- this is necessary, do not forget to include this -->
+			{{form.hidden_tag()}}
+
+			<fieldset>
+				<legend>Input Your Parameters</legend> <!-- this generates -->
+				<!-- use jinja in each div tag to generate the necessary html to make it work-->
+				<div>
+					{{form.tech_stack.label()}} <!-- label gives the question -->
+					{{form.tech_stack()}} <!-- this gives the choices -->
+				</div>
+
+				<div> 
+					{{form.salary_range.label()}}
+					{{form.salary_range()}}
+				</div>
+
+			</fieldset>
+
+			<div> 
+			<!-- 	this is the submit button -->
+				{{form.submit()}}
+			</div>
+		</form>
+
+		<div>
+			<!-- this is where the results are written to-->
+			<p> Class: {{most_likely_class_name}} </p> 
+			<p> Probability: {{most_likely_class_prob}} </p>
+			<p> Class: {{least_likely_class_name}} </p>
+			<p> Probability: {{least_likely_class_prob}} </p>
+		</div>
+	</body>
+</html>
