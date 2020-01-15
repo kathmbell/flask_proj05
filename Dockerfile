@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get upgrade -y
 
 ENV WORK_DIR=/flask_proj05
- # this is the directory we wil work from in the docker container.  
+
+# this is the directory we wil work from in the docker container.  
 WORKDIR ${WORK_DIR}/
 
 
