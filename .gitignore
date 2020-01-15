@@ -1,0 +1,4 @@
+
+# this is bunch of pyc files "python compiled" which are generated whenever you run python code.  They should not be included in a repo.
+
+__pycache__/
