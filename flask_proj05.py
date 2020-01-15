@@ -27,11 +27,11 @@ app.config["SECRET_KEY"] = "12345"  # secret key is necessary, but it can be any
 # load the model here, as well as other related components (dictionary, data structure containing topic-companies mapping etc.)
 print("Loading models...")
 
-kmodes_model = joblib.load("model.pkl")
-dictionary = joblib.load("flask_dict.pkl")
-tech_columns = joblib.load("column_headers.pkl")
+kmodes_model = joblib.load("data/model.pkl")
+dictionary = joblib.load("data/flask_dict.pkl")
+tech_columns = joblib.load("data/column_headers.pkl")
 tech_columns = [a.lower().strip() for a in tech_columns]
-geo_data = json.load(open("custom.geo.json", "r"))
+geo_data = json.load(open("data/custom.geo.json", "r"))
 
 
 def tech_request_vec(text, columns):
