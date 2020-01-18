@@ -1,6 +1,9 @@
 # flask_proj05
 
-App Demo ![Flask App Demo](static/demo.gif)
+Gif demo of working app. 
+![Flask App Demo](static/demo.gif)
+
+Live app [hosted on Heroku](https://tech-clusters-app.herokuapp.com/) and more information on [project design and data can be found on Towards Data Science](https://towardsdatascience.com/international-talent-segmentation-for-startups-3f88cb1b6e70)
 
 Install this: https://docs.docker.com/docker-for-mac/install/
 
