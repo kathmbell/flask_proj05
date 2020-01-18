@@ -1,5 +1,7 @@
 # flask_proj05
 
+App Demo ![Flask App Demo](static/demo.gif)
+
 Install this: https://docs.docker.com/docker-for-mac/install/
 
 run this:
