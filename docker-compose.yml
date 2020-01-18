@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+
+  dev:  # this can be called whatever you like.  dev, test.  its used to identify which image to build/run with docker-compose build ____
+    build:
+      context: ./ # from what directory do we start looking your files?
+      dockerfile: ./Dockerfile # where does the dockerfile live?
+    ports:
+      - "5000:5000" # maps the docker images' port 5000 to your local machine's port 5000
+    volumes:
+      - ./:/my_app/flask_proj05 # the files that live in this dirctory should "map" or be a shortcut to this directory on the docker image
+
+    command: bash -c "python flask_proj05.py"
